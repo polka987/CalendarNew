@@ -1,0 +1,55 @@
+﻿<Page x:Class="CalendarNew.Views.SelectDay"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CalendarNew.Views"
+      mc:Ignorable="d"
+      Title="SelectDay" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="BackBtn" Height="90" Width="150" Content="Back" FontSize="50"
+                HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding BackBtn_Click}"/>
+
+        <RadioButton 
+            IsChecked = "{Binding GustaBtn, Mode = TwoWay}"
+            x:Name="first" VerticalAlignment="Center" Height="80"
+                     Grid.Column="1" HorizontalAlignment="Center">
+            <Image Source="/img/gusta.jpg" />
+        </RadioButton>
+
+        <RadioButton 
+            IsChecked = "{Binding OkayBtn, Mode = TwoWay}" x:Name="second" VerticalAlignment="Center" Grid.Column="1"
+                     Height="80" Grid.Row="1" HorizontalAlignment="Center">
+            <Image Source="/img/ok.jpg" />
+        </RadioButton>
+
+        <RadioButton IsChecked = "{Binding PokerBtn, Mode = TwoWay}" x:Name="fird" VerticalAlignment="Center" Grid.Column="1"
+                     Height="80" Grid.Row="2" HorizontalAlignment="Center">
+            <Image Source="/img/poker.jpg" />
+        </RadioButton>
+
+        <RadioButton IsChecked = "{Binding IBtn, Mode = TwoWay}" x:Name="fourth" VerticalAlignment="Center" Grid.Column="1"
+                     Height="80" Grid.Row="3" HorizontalAlignment="Center">
+            <Image Source="/img/you.jpg" />
+        </RadioButton>
+
+        <Button x:Name="SaveBtn" Height="75" Grid.Column="1" Grid.Row="4" Content="Save" FontSize="50"
+                Command="{Binding SaveBtn_Click}" VerticalAlignment="Bottom"/>
+
+        <DatePicker Grid.Column="2"
+                    SelectedDate="{Binding SelectDate}" x:Name="GetDate" FontSize="30"/>
+    </Grid>
+</Page>

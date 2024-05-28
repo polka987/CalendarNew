@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Update="Views\MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="img\gusta.jpg" />
+      <Resource Include="img\gusta.jpg" />
+      <None Remove="img\ok.jpg" />
+      <Resource Include="img\ok.jpg" />
+      <None Remove="img\poker.jpg" />
+      <Resource Include="img\poker.jpg" />
+      <None Remove="img\you.jpg" />
+      <Resource Include="img\you.jpg" />
+    </ItemGroup>
+
+</Project>
